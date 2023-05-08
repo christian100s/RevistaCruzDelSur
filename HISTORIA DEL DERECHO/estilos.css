@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*--- SISTEMA DE GRIDS APLICADO AL INDEX ---*/
+.grid-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 1.5fr;
+  grid-template-rows: 1fr 3fr 1.2fr 0.8fr 1fr 0.5fr;
+  grid-template-areas: "nav nav nav nav" "main main main main" "content1 content1 content1 content1" "content2 content2 content2 content2" "content3 content3 content3 content3" "footer footer footer footer";
+  grid-gap: 5px;
+}
+
+/*--- HEADER INDEX. BARRA NAVEGADORA ---*/
+.encabezado {
+  text-decoration: none;
+  color: rgb(3, 3, 3);
+  padding: 10px;
+}
+
+.navegadoraEstilo{
+  text-decoration: none;
+  color: rgb(3, 3, 3);
+  padding: 10px;
+}
+
+div nav div div a:hover {
+  color: goldenrod;
+}
+
+nav div img {
+  width: 5%;
+  height: 5%;
+}
+
+nav {
+  grid-area: nav;
+}
+
+/*--- MAIN INDEX. CARROUSEL IMAGENES ---*/
+.carouselPrincipal {
+  grid-area: main;
+  grid-row: 2/3;
+  border-top: 3px groove;
+  background-image: url("img/fondoIndex.jpg");
+  background-size: cover;
+}
+
+/*--- TEXTO, TITULO Y BOTON CONTENT1, CONTENT2 Y CONTENT3  ---*/
+#content1 {
+  grid-area: content1;
+  border-bottom: 3px groove;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-top: 1px solid;
+}
+
+#content2 {
+  grid-area: content2;
+  border-bottom: 3px groove;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#content3 {
+  grid-area: content3;
+  border-bottom: 3px groove;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.titulo {
+  font-family: Blackadder ITC;
+  font-size: 60px;
+  text-align: center;
+  text-decoration: underline;
+  padding: 2% 0 1% 0;
+}
+
+.tituloMenor {
+  font-family: Blackadder ITC;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 1%;
+}
+
+.textoCentral {
+  text-align: justify;
+  padding: 2% 10% 3% 10%;
+}
+
+.boton-alineado {
+  display: flex;
+  justify-content: right;
+  padding: 0 10% 2% 0;
+}
+
+.boton-alineado a {
+  text-decoration: none;
+  color: rgb(3, 3, 3);
+}
+
+.botonDireccion {
+  text-decoration: none;
+  color: rgb(3, 3, 3);
+}
+
+/*--- FOOTER INDEX ---*/
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: footer;
+  height: 100%;
+}
+
+.footer-izquierda, .footer-derecha {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: center;
+  margin-left: 3%;
+  margin-right: 2%;
+}
+
+.footer-centro {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.footer-centro p {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 10px;
+}
+
+.footer-derecha {
+  text-align: right;
+}
+
+.colorFooter {
+  background-color: rgba(253, 196, 196, 0.3);
+  grid-row: 3/-5;
+}
+
+footer {
+  grid-area: footer;
+}
+
+footer p {
+  padding-left: 10%;
+  text-align: justify;
+  font-size: 12px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.traductor {
+  padding-top: 3%;
+}
+
+/*--- MEDIA QUERY INDEX ---*/
+@media only screen and (max-width: 480px) {
+  .grid-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav nav" "main main" "content1 content1" "content2 content2" "content3 content3" "footer";
+  }
+  .titulo {
+    font-size: 30px;
+  }
+  .tituloMenor {
+    font-size: 20px;
+  }
+  .barra1 {
+    padding-top: 10px;
+  }
+  .barra1 img {
+    width: 80px;
+    height: 50px;
+  }
+  .footer-izquierda img {
+    width: 100%;
+    height: 15%;
+  }
+  .footer-derecha img {
+    width: 100%;
+    height: 20%;
+  }
+  .barra4 {
+    margin-left: 20%;
+  }
+}
